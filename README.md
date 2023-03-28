@@ -1,6 +1,6 @@
 # cursoPythonFastapiLab
 Projeto de CRUD do domínio de curso usando Fastapi Python
 
-Para Rodar
-pipenv install
-python main.py
+Para Rodar <br />
+pipenv install <br />
+python main.py <br />
