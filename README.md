@@ -5,6 +5,6 @@ install Python 3.11<br /><br />
 
 
 
-pip install pipenv <br />
-run pipenv install <br />
-run python main.py <br />
+#pip install pipenv <br />
+#un pipenv install <br />
+#un python main.py <br />
