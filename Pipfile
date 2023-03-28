@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+python-multipart = "*"
+fastapi = "*"
+uvicorn = "*"
+tortoise = "*"
+fastapi-pagination = {extras = ["tortoise"], version = "*"}
+pydantic = "*"
+loguru = "*"
+aerich = "*"
+fastapi-camelcase = "*"
+python-decouple = "*"
+mysqlclient = "*"
+aiomysql = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

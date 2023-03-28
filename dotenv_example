@@ -1,0 +1,9 @@
+APP_VERSION=1.0.0
+ENVIRONMENT=dev
+TESTING=True
+APP_PORT=8000
+APP_NAME="Teste Appname"
+APP_DESCRIPTION="Serviço de teste de teste."
+DEBUG=False
+DB_TEST_URL=sqlite://:memory:
+DB_URL=mysql://root:123456@127.0.0.1/teste
