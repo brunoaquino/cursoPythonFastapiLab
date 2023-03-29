@@ -4,7 +4,7 @@ from starlette import status
 
 from app.config.settings import get_settings
 
-from ..core.logging import LoggingUnder
+from ..core.logging import LoggingSystem
 from . import schema
 from . import usecase 
 
@@ -18,7 +18,7 @@ settings = get_settings()
     description="This router is to create new curso",
     status_code=status.HTTP_201_CREATED,
     response_model=schema.GetCurso,
-    dependencies=[Depends(LoggingUnder())],
+    dependencies=[Depends(LoggingSystem())],
 )
 async def post_curso(payload: schema.PostCurso):
     return await usecase.CreateCursoUseCase(payload).execute()
@@ -29,7 +29,7 @@ async def post_curso(payload: schema.PostCurso):
     description="Router to list all Cursos registered",
     response_model=Page[schema.GetCurso],
     status_code=status.HTTP_200_OK,
-    dependencies=[Depends(LoggingUnder())],
+    dependencies=[Depends(LoggingSystem())],
 )
 async def get_all_cursos():
     cursos = await usecase.GetAllCursoUseCase().execute()
@@ -41,7 +41,7 @@ async def get_all_cursos():
     status_code=status.HTTP_200_OK,
     description="Router to one Curso by id",
     response_model=schema.GetCurso,
-    dependencies=[Depends(LoggingUnder())],
+    dependencies=[Depends(LoggingSystem())],
 )
 async def get_curso(id: int):
     return await usecase.GetOneCursoUseCase(id).execute()
@@ -50,7 +50,7 @@ async def get_curso(id: int):
 @router.put(
     "/{id}",
     status_code=status.HTTP_200_OK,
-    dependencies=[Depends(LoggingUnder())],
+    dependencies=[Depends(LoggingSystem())],
     description="Router to update Curso by id",
 )
 async def put_curso(id: int, payload: schema.UpdateCurso):
